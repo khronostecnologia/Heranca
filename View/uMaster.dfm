@@ -46,7 +46,7 @@ object FrmMaster: TFrmMaster
     Fill.ShadowColor = clHighlight
     Fill.ShadowOffset = 0
     Fill.Glow = gmNone
-    Version = '1.5.2.1'
+    Version = '1.5.2.4'
     Align = alClient
     TabOrder = 0
     TMSStyle = 4
@@ -80,7 +80,7 @@ object FrmMaster: TFrmMaster
       Fill.ShadowColor = clHighlight
       Fill.ShadowOffset = 0
       Fill.Glow = gmNone
-      Version = '1.5.2.1'
+      Version = '1.5.2.4'
       Align = alTop
       TabOrder = 0
       TMSStyle = 4
@@ -129,7 +129,7 @@ object FrmMaster: TFrmMaster
       Fill.ShadowColor = clHighlight
       Fill.ShadowOffset = 0
       Fill.Glow = gmNone
-      Version = '1.5.2.1'
+      Version = '1.5.2.4'
       Align = alClient
       TabOrder = 1
       TMSStyle = 4
@@ -163,7 +163,7 @@ object FrmMaster: TFrmMaster
         Fill.ShadowColor = clHighlight
         Fill.ShadowOffset = 0
         Fill.Glow = gmNone
-        Version = '1.5.2.1'
+        Version = '1.5.2.4'
         Align = alBottom
         TabOrder = 0
         TMSStyle = 4
