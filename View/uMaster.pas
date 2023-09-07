@@ -16,9 +16,11 @@ type
     PnlFooter: TAdvSmoothPanel;
     lblTitulo: TLabel;
     procedure FormKeyPress(Sender: TObject; var Key: Char);
+  protected
+    { Protected declarations }
+    procedure ControlaEditsMaster(AEnabled: Boolean);
   private
     { Private declarations }
-    procedure ControlaEditsMaster(AEnabled: Boolean);
   public
     { Public declarations }
   end;
