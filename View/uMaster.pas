@@ -6,7 +6,7 @@ uses
   Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes,
   Vcl.Graphics,Vcl.Controls, Vcl.Forms, Vcl.Dialogs, AdvSmoothPanel, Vcl.StdCtrls,
   JvDBCheckBox, JvExMask,JvToolEdit, JvDBControls, cxCheckBox, JvMaskEdit,
-  Vcl.ExtCtrls, Vcl.Menus, cxCurrencyEdit,Vcl.DBCtrls;
+  Vcl.ExtCtrls, Vcl.Menus, cxCurrencyEdit,Vcl.DBCtrls,RxDBCtrl;
 
 type
   TFrmMaster = class(TForm)
@@ -51,40 +51,44 @@ begin
     if Self.Components[I].Tag <> 0 then
     begin
       if Self.Components[I] is TDBMemo then
-        TDBMemo(Self.Components[I]).Enabled       := false;
+        TDBMemo(Self.Components[I]).Enabled           := false;
       if Self.Components[I] is TDBEdit then
-        TDBEdit(Self.Components[I]).Enabled       := false;
+        TDBEdit(Self.Components[I]).Enabled           := false;
       if Self.Components[I] is TDBComboBox then
-        TDBComboBox(Self.Components[I]).Enabled   := false;
+        TDBComboBox(Self.Components[I]).Enabled       := false;
       if Self.Components[I] is TJvDBDateEdit then
-        TJvDBDateEdit(Self.Components[I]).Enabled := false;
+        TJvDBDateEdit(Self.Components[I]).Enabled     := false;
       if Self.Components[I] is TJvDBCheckBox then
-        TJvDBCheckBox(Self.Components[I]).Enabled := false;
+        TJvDBCheckBox(Self.Components[I]).Enabled     := false;
       if Self.Components[I] is TJvDBMaskEdit then
-        TJvDBMaskEdit(Self.Components[I]).Enabled := false;
+        TJvDBMaskEdit(Self.Components[I]).Enabled     := false;
       if Self.Components[I] is TJvDBCalcEdit then
-        TJvDBCalcEdit(Self.Components[I]).Enabled := false;
+        TJvDBCalcEdit(Self.Components[I]).Enabled     := false;
       if Self.Components[I] is TDBLookupComboBox then
         TDBLookupComboBox(Self.Components[I]).Enabled := false;
+      if Self.Components[I] is TRxDBCalcEdit then
+        TRxDBCalcEdit(Self.Components[I]).Enabled     := false;
     end
     else
     begin
       if Self.Components[I] is TDBMemo then
-        TDBMemo(Self.Components[I]).Enabled       := AEnabled;
+        TDBMemo(Self.Components[I]).Enabled           := AEnabled;
       if Self.Components[I] is TDBEdit then
-        TDBEdit(Self.Components[I]).Enabled       := AEnabled;
+        TDBEdit(Self.Components[I]).Enabled           := AEnabled;
       if Self.Components[I] is TDBComboBox then
-        TDBComboBox(Self.Components[I]).Enabled   := AEnabled;
+        TDBComboBox(Self.Components[I]).Enabled       := AEnabled;
       if Self.Components[I] is TJvDBDateEdit then
-        TJvDBDateEdit(Self.Components[I]).Enabled := AEnabled;
+        TJvDBDateEdit(Self.Components[I]).Enabled     := AEnabled;
       if Self.Components[I] is TJvDBCheckBox then
-        TJvDBCheckBox(Self.Components[I]).Enabled := AEnabled;
+        TJvDBCheckBox(Self.Components[I]).Enabled     := AEnabled;
       if Self.Components[I] is TJvDBMaskEdit then
-        TJvDBMaskEdit(Self.Components[I]).Enabled := AEnabled;
+        TJvDBMaskEdit(Self.Components[I]).Enabled     := AEnabled;
       if Self.Components[I] is TJvDBCalcEdit then
-        TJvDBCalcEdit(Self.Components[I]).Enabled := AEnabled;
+        TJvDBCalcEdit(Self.Components[I]).Enabled     := AEnabled;
       if Self.Components[I] is TDBLookupComboBox then
         TDBLookupComboBox(Self.Components[I]).Enabled := AEnabled;
+      if Self.Components[I] is TRxDBCalcEdit then
+        TRxDBCalcEdit(Self.Components[I]).Enabled     := AEnabled;
     end;
   end;
 end;
