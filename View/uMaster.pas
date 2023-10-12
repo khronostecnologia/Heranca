@@ -16,6 +16,7 @@ type
     PnlFooter: TAdvSmoothPanel;
     lblTitulo: TLabel;
     procedure FormKeyPress(Sender: TObject; var Key: Char);
+    procedure FormCreate(Sender: TObject);
   protected
     { Protected declarations }
     procedure ControlaEditsMaster(AEnabled: Boolean);
@@ -31,6 +32,11 @@ var
 implementation
 
 {$R *.dfm}
+
+procedure TFrmMaster.FormCreate(Sender: TObject);
+begin
+  Caption := Application.Title + ' | ' + Name;
+end;
 
 procedure TFrmMaster.FormKeyPress(Sender: TObject; var Key: Char);
 begin
