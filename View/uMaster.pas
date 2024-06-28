@@ -57,23 +57,27 @@ begin
     if Self.Components[I].Tag <> 0 then
     begin
       if Self.Components[I] is TDBMemo then
-        TDBMemo(Self.Components[I]).Enabled           := false;
+        TDBMemo(Self.Components[I]).Enabled           := False;
       if Self.Components[I] is TDBEdit then
-        TDBEdit(Self.Components[I]).Enabled           := false;
+        TDBEdit(Self.Components[I]).Enabled           := False;
       if Self.Components[I] is TDBComboBox then
-        TDBComboBox(Self.Components[I]).Enabled       := false;
+        TDBComboBox(Self.Components[I]).Enabled       := False;
       if Self.Components[I] is TJvDBDateEdit then
-        TJvDBDateEdit(Self.Components[I]).Enabled     := false;
+        TJvDBDateEdit(Self.Components[I]).Enabled     := False;
       if Self.Components[I] is TJvDBCheckBox then
-        TJvDBCheckBox(Self.Components[I]).Enabled     := false;
+        TJvDBCheckBox(Self.Components[I]).Enabled     := False;
       if Self.Components[I] is TJvDBMaskEdit then
-        TJvDBMaskEdit(Self.Components[I]).Enabled     := false;
+        TJvDBMaskEdit(Self.Components[I]).Enabled     := False;
       if Self.Components[I] is TJvDBCalcEdit then
-        TJvDBCalcEdit(Self.Components[I]).Enabled     := false;
+        TJvDBCalcEdit(Self.Components[I]).Enabled     := False;
       if Self.Components[I] is TDBLookupComboBox then
-        TDBLookupComboBox(Self.Components[I]).Enabled := false;
+        TDBLookupComboBox(Self.Components[I]).Enabled := False;
       if Self.Components[I] is TRxDBCalcEdit then
-        TRxDBCalcEdit(Self.Components[I]).Enabled     := false;
+        TRxDBCalcEdit(Self.Components[I]).Enabled     := False;
+      if Self.Components[I] is TDBRadioGroup then
+        TDBRadioGroup(Self.Components[I]).Enabled     := False;
+      if Self.Components[I] is TDBImage then
+        TDBImage(Self.Components[I]).Enabled          := False;
     end
     else
     begin
@@ -95,6 +99,10 @@ begin
         TDBLookupComboBox(Self.Components[I]).Enabled := AEnabled;
       if Self.Components[I] is TRxDBCalcEdit then
         TRxDBCalcEdit(Self.Components[I]).Enabled     := AEnabled;
+      if Self.Components[I] is TDBRadioGroup then
+        TDBRadioGroup(Self.Components[I]).Enabled     := AEnabled;
+      if Self.Components[I] is TDBImage then
+        TDBImage(Self.Components[I]).Enabled          := AEnabled;
     end;
   end;
 end;
