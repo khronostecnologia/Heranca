@@ -79,6 +79,8 @@ begin
         TDBRadioGroup(Self.Components[I]).Enabled     := False;
       if Self.Components[I] is TDBImage then
         TDBImage(Self.Components[I]).Enabled          := False;
+      if Self.Components[I] is TCheckBox then
+        TCheckBox(Self.Components[I]).Enabled         := False;
     end
     else
     begin
@@ -104,6 +106,8 @@ begin
         TDBRadioGroup(Self.Components[I]).Enabled     := AEnabled;
       if Self.Components[I] is TDBImage then
         TDBImage(Self.Components[I]).Enabled          := AEnabled;
+      if Self.Components[I] is TCheckBox then
+        TCheckBox(Self.Components[I]).Enabled         := AEnabled;
     end;
   end;
 end;
