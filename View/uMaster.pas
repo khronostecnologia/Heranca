@@ -6,7 +6,7 @@ uses
   Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes,
   Vcl.Graphics,Vcl.Controls, Vcl.Forms, Vcl.Dialogs, AdvSmoothPanel, Vcl.StdCtrls,
   JvDBCheckBox, JvExMask,JvToolEdit, JvDBControls, cxCheckBox, JvMaskEdit,
-  Vcl.ExtCtrls, Vcl.Menus, cxCurrencyEdit,Vcl.DBCtrls,RxDBCtrl;
+  Vcl.ExtCtrls, Vcl.Menus, cxCurrencyEdit,Vcl.DBCtrls,RxDBCtrl, Vcl.ComCtrls;
 
 type
   TFrmMaster = class(TForm)
@@ -81,6 +81,12 @@ begin
         TDBImage(Self.Components[I]).Enabled          := False;
       if Self.Components[I] is TCheckBox then
         TCheckBox(Self.Components[I]).Enabled         := False;
+      if Self.Components[I] is TEdit then
+        TEdit(Self.Components[I]).Enabled             := False;
+      if Self.Components[I] is TComboBox then
+        TComboBox(Self.Components[I]).Enabled         := False;
+      if Self.Components[I] is TDateTimePicker then
+        TDateTimePicker(Self.Components[I]).Enabled   := False;
     end
     else
     begin
@@ -108,6 +114,18 @@ begin
         TDBImage(Self.Components[I]).Enabled          := AEnabled;
       if Self.Components[I] is TCheckBox then
         TCheckBox(Self.Components[I]).Enabled         := AEnabled;
+
+      if Self.Components[I] is TEdit then
+      begin
+        if TEdit(Self.Components[I]).Name <> 'EdtCodigo' then
+          TEdit(Self.Components[I]).Enabled           := AEnabled;
+      end;
+
+      if Self.Components[I] is TComboBox then
+        TComboBox(Self.Components[I]).Enabled         := AEnabled;
+
+       if Self.Components[I] is TDateTimePicker then
+        TDateTimePicker(Self.Components[I]).Enabled   := AEnabled;
     end;
   end;
 end;
